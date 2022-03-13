@@ -1,0 +1,116 @@
+@import 'base.css';
+html{
+  overflow-x:hidden
+}
+body{
+    max-width: 100vw;
+}
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow-y: overlay;
+}
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: #71a0c1;
+    background: white url(../imgs/41.jpg) center center / cover no-repeat fixed;
+  }
+  
+  /* ----------------------------------------- */
+  /* Header */
+  /* ----------------------------------------- */
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.52);
+    overflow: hidden;
+    height: 100vh;
+    z-index: 2;
+  }
+  .text-center{
+      color: white;
+  }
+  .herobanner{
+      height: calc(100vh - 70px - 50px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .herobanner h2{
+    
+    font-size: 70px;
+  }
+  .herofooter{
+      display: flex;
+      justify-content: center;
+  }
+  .herofooter ul li{
+      color: white;
+      list-style-type: none;
+  }
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 20px;
+    }
+  }
+  .anim{
+    animation: MoveUpDown 2s linear infinite;
+  }
+  .herofooter ul li a{
+      font-size: 20px;
+
+      position: absolute;
+  }
+  .space{
+      height: 500px;
+  }
+
+  @media screen and (min-width: 320px) {
+    .container,
+    .row-container {
+      width: 100%;
+    }
+    .herobanner h2 {
+      font-size: 45px;
+    }
+  }
+  @media screen and (min-width: 580px) {
+    .container,
+    .row-container {
+      width: 100%;
+    }
+    .row-reverse {
+      flex-direction: column-reverse;
+    }
+
+    .herobanner h2 {
+      font-size: 65px;
+    }
+
+  }
+  
+  @media screen and (min-width: 768px) {
+    .container,
+    .row-container {
+      width: 768px;
+    }
+    .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+  }
+  @media screen and (min-width: 1024px) {
+    .container,
+    .row-container {
+      width: 1024px;
+    }
+    .herobanner h2 {
+      font-size: 74px;
+    }
+  }
